@@ -1,0 +1,23 @@
+.gls-offroad {
+  background: url("./assets/gls-class/offroad.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.gls-side {
+  background: url("./assets/gls-class/side.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.gls-rear {
+  background: url("./assets/gls-class/rear.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.gls-thumbnail {
+  background: url("./assets/gls-class/thumbnail.jpg");
+  background-size: cover;
+  background-position: center center;
+}

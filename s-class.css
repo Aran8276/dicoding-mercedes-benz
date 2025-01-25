@@ -1,0 +1,29 @@
+.s-rear {
+  background: url("./assets/s-class/rear.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.s-interior {
+  background: url("./assets/s-class/interior.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.s-flyby {
+  background: url("./assets/s-class/flyby.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.s-rims {
+  background: url("./assets/s-class/rims.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.s-thumbnail {
+  background: url("./assets/s-class/thumbnail.jpg");
+  background-size: cover;
+  background-position: center center;
+}

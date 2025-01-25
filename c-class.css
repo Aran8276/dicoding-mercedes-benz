@@ -1,0 +1,29 @@
+.c-rear {
+  background: url("./assets/c-class/rear.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.c-rims {
+  background: url("./assets/c-class/rims.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.c-interior {
+  background: url("./assets/c-class/interior.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.c-engine {
+  background: url("./assets/c-class/engine.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.c-thumbnail {
+  background: url("./assets/c-class/thumbnail.jpg");
+  background-size: cover;
+  background-position: center center;
+}

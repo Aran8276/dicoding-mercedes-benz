@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Mercedes-Benz by Aran8276 - Dicoding</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./c-class.css" />
+    <link rel="stylesheet" href="./e-class.css" />
+    <link rel="stylesheet" href="./s-class.css" />
+    <link rel="stylesheet" href="./gls-class.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <input
+          id="modelOpen"
+          onchange="handleModelMenu(event)"
+          class="hidden"
+          type="checkbox"
+        />
+        <label for="modelOpen" href="#">Models</label>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+      </nav>
+      <div class="logo">
+        <!-- <img class="logo" src="./assets/logo.svg" alt="Mercedes Logo" /> -->
+      </div>
+      <div class="location">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-map-pin"
+        >
+          <path
+            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+          />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        <span>Malang</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- PERINGATAN: INI WEBSITE SPA (SINGLE PAGE APPLICATION) -->
+
+      <!-- MULAI ELEMEN YANG NEMPEL TERUS ADA DISINI -->
+      <div id="intro" class="intro">
+        <img
+          id="introLogo"
+          class="intro-logo"
+          src="./assets/logo.svg"
+          alt="logo"
+        />
+      </div>
+
+      <aside id="modelMenu" class="models-sidebar">
+        <section
+          style="width: fit-content; height: fit-content; cursor: pointer"
+          onclick="handleModelMenu()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </section>
+
+        <section>
+          <li
+            onclick="switchPage('c-class-page', 'c-class-model')"
+            href="#"
+            class="model-box"
+            id="c-class-model"
+          >
+            <img class="car" src="./assets/c-class/transparent.png" alt="" />
+            <div class="car-text" id="c-class-model-text">The C-Class</div>
+          </li>
+          <li
+            onclick="switchPage('e-class-page', 'e-class-model')"
+            href="#"
+            class="model-box"
+            id="e-class-model"
+          >
+            <img class="car" src="./assets/e-class/transparent.png" alt="" />
+            <div class="car-text" id="e-class-model-text">The E-Class</div>
+          </li>
+          <li
+            onclick="switchPage('s-class-page', 's-class-model')"
+            href="#"
+            class="model-box"
+            id="s-class-model"
+          >
+            <img class="car" src="./assets/s-class/transparent.png" alt="" />
+            <div class="car-text" id="s-class-model-text">The S-Class</div>
+          </li>
+          <li
+            onclick="switchPage('gls-class-page', 'gls-class-model')"
+            href="#"
+            class="model-box"
+            id="gls-class-model"
+          >
+            <img class="car" src="./assets/gls-class/transparent.png" alt="" />
+            <div class="car-text" id="gls-class-model-text">The GLS-Class</div>
+          </li>
+        </section>
+      </aside>
+
+      <aside id="modelMenuPreview" class="model-menu-preview">
+        <img
+          src="./assets/hover/c-class.jpg"
+          class="preview-img"
+          id="c-class-cover"
+          alt=""
+        />
+        <img
+          src="./assets/hover/e-class.jpg"
+          class="preview-img"
+          id="e-class-cover"
+          alt=""
+        />
+        <img
+          src="./assets/hover/s-class.jpg"
+          class="preview-img"
+          id="s-class-cover"
+          alt=""
+        />
+        <img
+          src="./assets/hover/gls-class.jpg"
+          class="preview-img"
+          id="gls-class-cover"
+          alt=""
+        />
+      </aside>
+
+      <!-- STOP ELEMEN STATIS ADA DISINI -->
+
+      <!-- MULAI KUMPULAN PAGE LIST ADA DISINI -->
+      <section id="home-page">
+        <section class="carousel" id="carousel">
+          <figure id="c-class" class="jumbotron slide c-class">
+            <article class="thumb-preview-container">
+              <span>COMPACT SEDAN</span>
+              <h2>C CLASS</h2>
+            </article>
+          </figure>
+          <figure id="e-class" class="jumbotron slide e-class">
+            <article class="thumb-preview-container">
+              <span>MIDSIZE SEDAN</span>
+              <h2>E CLASS</h2>
+            </article>
+          </figure>
+          <figure id="gls-class" class="jumbotron slide gls-class">
+            <article class="thumb-preview-container">
+              <span>LUXURY SUV</span>
+              <h2>GLS CLASS</h2>
+            </article>
+          </figure>
+          <figure id="s-class" class="jumbotron slide s-class">
+            <article class="thumb-preview-container">
+              <span>LUXURY SEDAN</span>
+              <h2>S CLASS</h2>
+            </article>
+          </figure>
+          <aside id="button-container">
+            <button id="nextBtn" class="carousel-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-right"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+            <button id="prevBtn" class="carousel-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-left"
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+          </aside>
+        </section>
+
+        <section class="amg-line-card-container">
+          <a href="#" class="amg-line-card amg-cle450">
+            <div class="darken-down">
+              <p>CLE450 AMG</p>
+              <svg
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-move-right"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </div>
+          </a>
+          <a href="#" div class="amg-line-card amg-c43">
+            <div class="darken-down">
+              <p>C43 AMG</p>
+              <svg
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-move-right"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </div>
+          </a>
+          <a href="#" div class="amg-line-card amg-gt">
+            <div class="darken-down">
+              <p>AMG GT</p>
+              <svg
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-move-right"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </div>
+          </a>
+        </section>
+
+        <section class="cls-video-container">
+          <div class="iframe-bg">
+            <iframe
+              width="1920"
+              height="1080"
+              src="https://www.youtube.com/embed/OhB7ksCKP1s?autoplay=1&mute=1&controls=0&loop=1&playlist=OhB7ksCKP1s"
+            ></iframe>
+          </div>
+          <div class="cls-video-text">
+            <h2>MERCEDES</h2>
+            <h3>CLS</h3>
+            <span
+              onclick="switchPage('home-page')"
+              class="discover-btn"
+              href="#"
+            >
+              <span class="text">DISCOVER</span>
+              <svg
+                class="arrow"
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </span>
+          </div>
+        </section>
+      </section>
+
+      <section id="c-class-page">
+        <section class="cls-video-container">
+          <div class="iframe-bg">
+            <iframe
+              width="1920"
+              height="1080"
+              src="https://www.youtube.com/embed/J7LueobArWw?autoplay=1&mute=1&controls=0&loop=1&playlist=J7LueobArWw"
+            ></iframe>
+          </div>
+          <div class="cls-video-text">
+            <h2>C CLASS</h2>
+          </div>
+        </section>
+        <section class="section-container c-rear">
+          <h2>Exquisite Finish, Lasting Impression</h2>
+        </section>
+        <section class="section-container c-rims">
+          <h2>Precision in Every Detail</h2>
+        </section>
+        <section class="section-container c-interior">
+          <h2>Luxury Refined</h2>
+        </section>
+        <section class="section-container c-engine">
+          <h2>Power and Performance</h2>
+        </section>
+        <section class="section-container-bottom c-thumbnail">
+          <h2>The Compact C-Class Sedan</h2>
+          <div class="btn-container">
+            <span
+              onclick="switchPage('home-page')"
+              class="discover-btn"
+              href="#"
+            >
+              <span class="text">GET PRICING</span>
+              <svg
+                class="arrow"
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </span>
+            <span
+              onclick="switchPage('home-page')"
+              class="discover-btn"
+              href="#"
+            >
+              <span class="text">OTHER VEHICLES</span>
+              <svg
+                class="arrow"
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </span>
+          </div>
+        </section>
+      </section>
+
+      <section id="e-class-page">
+        <section class="cls-video-container">
+          <div class="iframe-bg">
+            <iframe
+              width="1920"
+              height="1080"
+              src="https://www.youtube.com/embed/HJuStxoaDf8?autoplay=1&mute=1&controls=0&loop=1&playlist=HJuStxoaDf8"
+            ></iframe>
+          </div>
+          <div class="cls-video-text">
+            <h2>E CLASS</h2>
+          </div>
+        </section>
+        <section class="section-container e-twins">
+          <h2>A Double Dose of Elegance</h2>
+        </section>
+        <section class="section-container e-side">
+          <h2>Dynamic Silhouette</h2>
+        </section>
+        <section class="section-container e-rear">
+          <h2>Sophistication at Every Angle</h2>
+        </section>
+        <section class="section-container e-grille">
+          <h2>Bold and Distinguished</h2>
+        </section>
+        <section class="section-container e-interior">
+          <h2>Exquisite Comfort</h2>
+        </section>
+        <section class="section-container-bottom e-thumbnail">
+          <h2>The Midsize E-Class Sedan</h2>
+          <div class="btn-container">
+            <span
+              onclick="switchPage('home-page')"
+              class="discover-btn"
+              href="#"
+            >
+              <span class="text">GET PRICING</span>
+              <svg
+                class="arrow"
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </span>
+            <span
+              onclick="switchPage('home-page')"
+              class="discover-btn"
+              href="#"
+            >
+              <span class="text">OTHER VEHICLES</span>
+              <svg
+                class="arrow"
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </span>
+          </div>
+        </section>
+      </section>
+
+      <section id="s-class-page">
+        <section class="cls-video-container">
+          <div class="iframe-bg">
+            <iframe
+              width="1920"
+              height="1080"
+              src="https://www.youtube.com/embed/-4zsY28t76k?autoplay=1&mute=1&controls=0&loop=1&playlist=-4zsY28t76k"
+            ></iframe>
+          </div>
+          <div class="cls-video-text">
+            <h2>S CLASS</h2>
+          </div>
+        </section>
+        <section class="section-container s-flyby">
+          <h2>Dynamic Elegance in Motion</h2>
+        </section>
+        <section class="section-container s-rims">
+          <h2>Crafted to Perfection</h2>
+        </section>
+        <section class="section-container s-interior">
+          <h2>Ultimate Comfort</h2>
+        </section>
+        <section class="section-container s-rear">
+          <h2>A Signature of Prestige</h2>
+        </section>
+        <section class="section-container-bottom s-thumbnail">
+          <h2>The Luxury S-Class Sedan</h2>
+          <div class="btn-container">
+            <span
+              onclick="switchPage('home-page')"
+              class="discover-btn"
+              href="#"
+            >
+              <span class="text">GET PRICING</span>
+              <svg
+                class="arrow"
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </span>
+            <span
+              onclick="switchPage('home-page')"
+              class="discover-btn"
+              href="#"
+            >
+              <span class="text">OTHER VEHICLES</span>
+              <svg
+                class="arrow"
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </span>
+          </div>
+        </section>
+      </section>
+
+      <section id="gls-class-page">
+        <section class="cls-video-container">
+          <div class="iframe-bg">
+            <iframe
+              width="1920"
+              height="1080"
+              src="https://www.youtube.com/embed/rag4v449WJM?autoplay=1&mute=1&controls=0&loop=1&playlist=rag4v449WJM"
+            ></iframe>
+          </div>
+          <div class="cls-video-text">
+            <h2>GLS CLASS</h2>
+          </div>
+        </section>
+        <section class="section-container gls-offroad">
+          <h2>Unleash Your Adventurous Spirit</h2>
+        </section>
+        <section class="section-container gls-side">
+          <h2>Imposing Presence</h2>
+        </section>
+        <section class="section-container gls-rear">
+          <h2>Elegance Meets Versatility</h2>
+        </section>
+        <section class="section-container-bottom gls-thumbnail">
+          <h2>The Luxury GLS-Class SUV</h2>
+          <div class="btn-container">
+            <span
+              onclick="switchPage('home-page')"
+              class="discover-btn"
+              href="#"
+            >
+              <span class="text">GET PRICING</span>
+              <svg
+                class="arrow"
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </span>
+            <span
+              onclick="switchPage('home-page')"
+              class="discover-btn"
+              href="#"
+            >
+              <span class="text">OTHER VEHICLES</span>
+              <svg
+                class="arrow"
+                style="margin-left: 20px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </span>
+          </div>
+        </section>
+      </section>
+      <!-- STOP KUMPULAN PAGE DISINI -->
+    </main>
+
+    <footer>
+      <section class="footer-sect-1">
+        <img class="logo" src="./assets/logo.svg" alt="logo" />
+        <section class="footer-links">
+          <ul>
+            <h5>Page</h5>
+            <li><label for="modelOpen" style="margin: 0px">Models</label></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <ul>
+            <h5>Social Media</h5>
+            <li><a href="https://youtube.com/@Aran8276/">YouTube</a></li>
+            <li><a href="https://instagram.com/aran8276/">Instagram</a></li>
+            <li><a href="https://github.com/aran8276/">GitHub</a></li>
+          </ul>
+          <ul>
+            <h5>Other Links</h5>
+            <li><a href="#">Privacy &amp; Policy</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </section>
+      </section>
+      <section class="footer-links">
+        <p>Made by Aran8276 / Zahran SMK Negeri 6 Malang</p>
+      </section>
+    </footer>
+  </body>
+
+  <script src="./script.js"></script>
+</html>

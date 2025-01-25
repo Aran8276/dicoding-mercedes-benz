@@ -1,0 +1,35 @@
+.e-rear {
+  background: url("./assets/e-class/rear.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.e-grille {
+  background: url("./assets/e-class/grille.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.e-interior {
+  background: url("./assets/e-class/interior.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.e-twins {
+  background: url("./assets/e-class/twins.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.e-side {
+  background: url("./assets/e-class/side.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.e-thumbnail {
+  background: url("./assets/e-class/thumbnail.jpg");
+  background-size: cover;
+  background-position: center center;
+}
